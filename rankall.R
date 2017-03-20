@@ -28,7 +28,7 @@ rankall <- function(outcome, num="best") {
                 }
                 else if(num == "worst"){
                         num = 1
-                        cbw <- do.call(rbind,lapply(split(cb1,cb1$state),transform, Order = rank(-hattack,ties.method = "first")))
+                        cbw <- ----------------------------------------------(-hattack,ties.method = "first")))
                         cb3 <- cbw[cbw$Order == num, ]
                 }
                 else if(num > 0){
@@ -41,7 +41,7 @@ rankall <- function(outcome, num="best") {
                 cb1[,3] <- suppressWarnings(as.numeric(cb1[,3]))
                 cb1 <- na.omit(cb1)
                 cb1 <- cb1[order(cb1$state, cb1$hname),]
-                cb2 <- do.call(rbind,lapply(split(cb1,cb1$state),transform, Order = rank(hfailure,ties.method = "first")))
+                cb2 <- do.call(-------------------------------------,ties.method = "first")))
                 
                 if(num == "best"){
                         num = 1
